@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.FirebaseApp;
@@ -41,7 +42,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    CircleImageView profile_image;
+    ImageView profile_image;
     TextView username;
 
     FirebaseUser firebaseUser;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 User user = dataSnapshot.getValue(User.class);
                 //username.setText(user.getUsername());
                 if (user.getImageURL().equals("default")){
-                    profile_image.setImageResource(R.mipmap.ic_launcher);
+                    profile_image.setImageResource(R.drawable.baseline_account_circle_white_24);
                 } else {
 
                     //change this
@@ -177,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
             return titles.get(position);
         }
     }
-
+    /*
     private void status(String status){
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
 
@@ -198,4 +199,5 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         status("offline");
     }
+    */
 }

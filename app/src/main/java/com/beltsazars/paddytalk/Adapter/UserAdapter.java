@@ -53,7 +53,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         final User user = mUsers.get(position);
         holder.username.setText(user.getUsername());
         if (user.getImageURL().equals("default")){
-            holder.profile_image.setImageResource(R.mipmap.ic_launcher);
+            holder.profile_image.setImageResource(R.drawable.baseline_account_circle_24);
         } else {
             Glide.with(mContext).load(user.getImageURL()).into(holder.profile_image);
         }
@@ -63,7 +63,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         } else {
             holder.last_msg.setVisibility(View.GONE);
         }
-
+/*
         if (ischat){
             if (user.getStatus().equals("online")){
                 holder.img_on.setVisibility(View.VISIBLE);
@@ -76,7 +76,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             holder.img_on.setVisibility(View.GONE);
             holder.img_off.setVisibility(View.GONE);
         }
-
+*/
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,12 +92,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         return mUsers.size();
     }
 
-    public  class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView username;
         public ImageView profile_image;
-        private ImageView img_on;
-        private ImageView img_off;
+        //private ImageView img_on;
+        //private ImageView img_off;
         private TextView last_msg;
 
         public ViewHolder(View itemView) {
@@ -105,8 +105,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
             username = itemView.findViewById(R.id.username);
             profile_image = itemView.findViewById(R.id.profile_image);
-            img_on = itemView.findViewById(R.id.img_on);
-            img_off = itemView.findViewById(R.id.img_off);
+            //img_off = itemView.findViewById(R.id.img_off);
+            //img_on = itemView.findViewById(R.id.img_on);
             last_msg = itemView.findViewById(R.id.last_msg);
         }
     }

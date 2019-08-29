@@ -102,11 +102,9 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 notify = true;
-                String msg = text_send.getText().toString();
+                String msg = text_send.getText().toString().trim();
                 if (!msg.equals("")){
                     sendMessage(fuser.getUid(), userid, msg);
-                } else {
-                    Toast.makeText(MessageActivity.this, "You can't send empty message", Toast.LENGTH_SHORT).show();
                 }
                 text_send.setText("");
             }
@@ -121,7 +119,7 @@ public class MessageActivity extends AppCompatActivity {
                 User user = dataSnapshot.getValue(User.class);
                 username.setText(user.getUsername());
                 if (user.getImageURL().equals("default")){
-                    profile_image.setImageResource(R.mipmap.ic_launcher);
+                    profile_image.setImageResource(R.drawable.baseline_account_circle_white_24);
                 } else {
                     //and this
                     Glide.with(getApplicationContext()).load(user.getImageURL()).into(profile_image);
@@ -226,7 +224,7 @@ public class MessageActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     com.beltsazars.paddytalk.Notifications.Token token = snapshot.getValue(com.beltsazars.paddytalk.Notifications.Token.class);
-                    com.beltsazars.paddytalk.Notifications.Data data = new com.beltsazars.paddytalk.Notifications.Data(fuser.getUid(), R.mipmap.ic_launcher, username+": "+message, "New Message",
+                    com.beltsazars.paddytalk.Notifications.Data data = new com.beltsazars.paddytalk.Notifications.Data(fuser.getUid(), R.mipmap.ic_launcher, message, username,
                             userid);
 
                     com.beltsazars.paddytalk.Notifications.Sender sender = new com.beltsazars.paddytalk.Notifications.Sender(data, token.getToken());

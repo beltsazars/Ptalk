@@ -18,7 +18,7 @@
             android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/MenuStyle">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:id="@+id/profile_image"/>
