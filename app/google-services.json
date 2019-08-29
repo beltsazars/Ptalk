@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "21461772483",
+    "firebase_url": "https://paddytalk-9b791.firebaseio.com",
+    "project_id": "paddytalk-9b791",
+    "storage_bucket": "paddytalk-9b791.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21461772483:android:e6def73744648e23",
+        "android_client_info": {
+          "package_name": "com.beltsazars.paddytalk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21461772483-5fgsoj4r2oq4i8nv4bt1m2p39qa4fc2u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.beltsazars.paddytalk",
+            "certificate_hash": "9e58ef7f87870f17608188ec36c3f109166433dd"
+          }
+        },
+        {
+          "client_id": "21461772483-90i0787fl8nfp35onqc1gntj5albf377.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfy-7a8kCTnHNYxTW7xBsbxHwu3Th_rx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21461772483-90i0787fl8nfp35onqc1gntj5albf377.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
