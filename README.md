@@ -1,3 +1,3 @@
-# Paddytalk
+# Ptalk
 
 My shitty intern project
